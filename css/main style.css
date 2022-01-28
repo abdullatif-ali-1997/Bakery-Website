@@ -1,0 +1,319 @@
+
+* {
+  transition: all ease 0.3s;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+body {
+  font-family: "Alegreya", serif;
+}
+section:nth-child(odd) {
+  background-color: #f8f8f8;
+}
+/* start setting box  */
+.setting-box {
+  width: 40px;
+  height: 85px;
+  top: 150px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.setting-box .gear-setting,
+.setting-box .add-to-card {
+  transition: all ease 0.5s;
+}
+.setting-box .gear-setting:hover .setting-text,
+.setting-box .add-to-card:hover .cart-text {
+  display: block !important;
+}
+.setting-box .gear-setting:hover i,
+.setting-box .add-to-card:hover i {
+  color: #09c;
+}
+.setting-box .gear-setting .setting-text,
+.setting-box .add-to-card .cart-text {
+  right: 40px;
+  width: 130px;
+  padding: 4px 5px;
+}
+.setting-box .gear-setting .setting-text {
+  top: -6px;
+}
+.setting-box .add-to-card .cart-text {
+  top: -3px;
+}
+.setting-box i {
+  font-size: 18px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+/* end setting box  */
+
+/* start scroll button  */
+.scroll-button button {
+  color: #8e7754 !important;
+  border: 2px solid #8e7754 !important;
+  background-color: transparent;
+  position: fixed;
+  font-size: 14px;
+  bottom: 15px;
+  right: -40px;
+  opacity: 0;
+  transition: all ease 0.4s;
+}
+.scroll-button button:focus {
+  outline: none !important;
+}
+.scroll-button button:hover {
+  background-color: #8e7754;
+  border-color: #fff !important;
+  color: #fff !important;
+}
+/* end scroll button  */
+/* start animated button  */
+.animated-button {
+  width: 35px;
+  height: 70px;
+  border: 3px solid #8e7754;
+}
+.animated-button span {
+  width: 6px;
+  height: 15px;
+  border-radius: 5px;
+  left: 50%;
+  bottom: 5px;
+  animation-name: scrolling-up;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes scrolling-up {
+  0% {
+    transform: translate(-50%, 0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -125%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -250%);
+    opacity: 0;
+  }
+}
+/* end animated button  */
+/* start section header  */
+/* start navbar */
+.navbar .navbar-brand img {
+  width: 150px;
+}
+
+@media (max-width: 992px) {
+  .navbar .navbar-nav {
+    background-color: rgb(142 119 84 / 90%) !important;
+    position: relative;
+  }
+  .navbar .navbar-nav::before {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: -18px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent #877153;
+  }
+}
+.navbar-light .navbar-toggler {
+  border-color: #877153 !important;
+}
+.navbar-light .navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 0.1rem #877153 !important;
+}
+.navbar-light .navbar-toggler span {
+  display: block;
+  font-weight: bold;
+  width: 30px;
+  height: 2px;
+  background-color: #877153;
+}
+/* end navbar */
+
+/* start landing image  */
+#home {
+  background-image: url(../images/header\ background.jpg);
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#home .bakery-caption h1 {
+  font-size: 75px;
+  font-weight: bold;
+}
+#home .bakery-caption p {
+  color: #ccc;
+  font-size: 25px;
+}
+@media (max-width: 768px) {
+  #home .bakery-caption h1 {
+    font-size: 60px;
+  }
+  #home .bakery-caption p {
+    font-size: 20px;
+  }
+  #home .buttons .btn-lg {
+    font-size: 1rem !important;
+  }
+}
+#home .buttons button {
+  transition: all ease 0.5s;
+}
+#home .buttons button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+#home .buttons .btn:hover {
+  background-color: #fff;
+  color: #111 !important;
+}
+#home .buttons button:first-of-type {
+  background-color: #8e7754;
+}
+#home .buttons button:last-of-type {
+  border: 1px solid #fff;
+}
+/* end landing image  */
+/* end section header  */
+
+/* start section who we are */
+#about p,
+#location p,
+#contact-us p {
+  color: #686868;
+  line-height: 1.8;
+}
+#about .container .text-sec .recommandations li {
+  color: #666;
+}
+#about .container .text-sec .recommandations li i {
+  color: #726c62;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #666;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* end section who we are */
+
+/* start section contact us  */
+#contact-us .contact-details {
+  color: #666;
+  font-size: 18px;
+}
+#contact-us .contact-details li {
+  display: flex;
+  align-items: center;
+}
+#contact-us .contact-details li i {
+  width: 35px;
+  height: 35px;
+  background-color: #8e7754;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* end section contact us  */
+
+/* start gallery */
+#gallery .container .baking-item {
+  background-color: rgb(142 119 84 / 70%);
+}
+/* end gallery */
+/* start section about-us  */
+#about-us {
+  background-color: #403d38;
+  color: #686868;
+}
+#about-us .container h3 {
+  font-size: 22px;
+}
+#about-us .container ul li {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 25px 0 !important;
+  border-bottom: 1px solid #666;
+}
+#about-us .container ul li p {
+  margin-bottom: 0 !important;
+  transition: all ease 0.3s;
+}
+#about-us .container .col-md-3:last-child ul li p:hover {
+  color: #fff !important;
+}
+#about-us .container ul li i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+/* end section about-us  */
+
+/* start footer  */
+footer {
+  background-color: #353330;
+}
+footer .container img {
+  width: 300px !important;
+  margin: auto !important;
+}
+@media (max-width:768px) {
+  footer .container img {
+    width: 150px !important;
+    margin: auto !important;
+  }
+  footer .copy-rights {
+    font-size: 16px !important;
+  }
+  footer .social-icons i {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+}
+footer .social-icons i {
+  width: 40px;
+  height: 40px;
+  color: #969696;
+  background-color: #484540;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.5s;
+}
+footer .social-icons i.fa-facebook-f:hover {
+  background-color: #3b5998;
+  color: #fff;
+}
+footer .social-icons i.fa-youtube:hover {
+  background-color: #f00;
+  color: #fff;
+}
+footer .social-icons i.fa-twitter:hover {
+  background-color: #00aced;
+  color: #fff;
+}
+footer .social-icons i.fa-google-plus-g:hover {
+  background-color: #dd4b32;
+  color: #fff;
+}
+/* end footer  */
